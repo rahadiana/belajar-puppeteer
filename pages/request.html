@@ -603,22 +603,47 @@
          </table>
       </center>
    </body>
-   <script>
-   
-var xhr = new XMLHttpRequest();
-xhr.withCredentials = true;
-
-xhr.addEventListener("readystatechange", function() {
-  if(this.readyState === 4) {
-    console.log(this.responseText);
-  }
-});
-
-xhr.open("GET", "https://cors-anywhere.herokuapp.com/https://example.com");
-xhr.setRequestHeader("origin", "demo");
-xhr.setRequestHeader("x-requested-with", "demo");
-
-xhr.send();
+   <script>		
+      var i = 5
+      
+          function startTimer() {
+            var countdownTimer = setInterval(function() {
+        
+      
+      var xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      
+      xhr.addEventListener("readystatechange", function() {
+      if(this.readyState === 4) {
+        console.log(this.responseText);
+      }
+      });
+      
+      xhr.open("GET", "https://cors-anywhere.herokuapp.com/https://example.com"+i);
+      xhr.setRequestHeader("origin", "demo.com");
+      xhr.setRequestHeader("x-requested-with", "demo.com");
+      
+      xhr.send();
+      
+      
+              
+              i = i - 1;
+      
+        if (i == 0) {
+            
+           i = 5 - 1;
+             //clearInterval(countdownTimer);
+        
+          
+        //return;
+      
+          }
+      
+              
+            }, 2000);
+          }
+          startTimer()
+       
    </script>
    <script type='text/javascript' src='https://news.ycombinator.com/hn.js?m9MyvHiGQoHzhJUTwNQL'></script>
    <!-- Mirrored from news.ycombinator.com/news by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jan 2021 20:13:25 GMT -->
