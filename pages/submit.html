@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+                <div id="newsResults">
+    
+                </div>
+				<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const product = urlParams.get('lname')
+
+
+  document.getElementById("newsResults").innerHTML = product
+  
+  var chkDocRef = document.referrer;
+console.log(chkDocRef);
+
+</script>
+</body>
+</html>
