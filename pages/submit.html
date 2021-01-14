@@ -11,10 +11,17 @@ const urlParams = new URLSearchParams(queryString);
 const product = urlParams.get('lname')
 
 
-  document.getElementById("newsResults").innerHTML = product
+ 
   
   var chkDocRef = document.referrer;
-console.log(chkDocRef);
+  
+  if(chkDocRef=="https://rahadiana.github.io/belajar-puppeteer/pages/form.html"){
+   document.getElementById("newsResults").innerHTML = product;
+  }else{
+  document.getElementById("newsResults").innerHTML = '';
+  alert("Anda Tidak Login");
+  }
+  
 
 </script>
 </body>
