@@ -8,15 +8,16 @@
 				<script>
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const product = urlParams.get('lname')
-
+const lname = urlParams.get('lname')
+const fname = urlParams.get('fname')
+const Fullname = fname+' '+lname;
 
  
   
   var chkDocRef = document.referrer;
   
   if(chkDocRef=="https://rahadiana.github.io/belajar-puppeteer/pages/form.html"){
-   document.getElementById("Results").innerHTML = product;
+   document.getElementById("Results").innerHTML = '<p style="text-align: center;"><span style="color: #000000;"><strong>ANDA TELAH LOGIN</strong></span></p><p style="text-align: center;"><span style="color: #000000;"><strong>Nama anda adalah : '+Fullname+'</strong></span></p>'product;
   }else{
   document.getElementById("Results").innerHTML = '';
   alert("Anda Tidak Login");
