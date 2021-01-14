@@ -2,7 +2,7 @@
 <html>
 <body>
 
-                <div id="newsResults">
+                <div id="Results">
     
                 </div>
 				<script>
@@ -16,9 +16,9 @@ const product = urlParams.get('lname')
   var chkDocRef = document.referrer;
   
   if(chkDocRef=="https://rahadiana.github.io/belajar-puppeteer/pages/form.html"){
-   document.getElementById("newsResults").innerHTML = product;
+   document.getElementById("Results").innerHTML = product;
   }else{
-  document.getElementById("newsResults").innerHTML = '';
+  document.getElementById("Results").innerHTML = '';
   alert("Anda Tidak Login");
   }
   
